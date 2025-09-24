@@ -1,0 +1,83 @@
+/* Button entrance animations for main pages */
+/* Only apply to buttons inside .content on main pages */
+/* EXCLUDE buttons inside .project-info */
+
+/* Text scramble animation for h1 and buttons */
+@keyframes textScramble {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-scramble {
+  animation: textScramble 2s ease-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes slideInButton {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    max-width: 0;
+    overflow: hidden;
+  }
+  30% {
+    opacity: 0.3;
+    transform: translateX(-30px);
+    max-width: 70%;
+  }
+  70% {
+    opacity: 0.8;
+    transform: translateX(-5px);
+    max-width: 95%;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    max-width: 100%;
+    overflow: visible;
+  }
+}
+
+/* Ensure smooth transitions when animation completes */
+.content button[type="button"]:not([style*="animation"]) {
+  transition: all 0.3s ease;
+}
+
+/* Exclude project-info buttons from animations */
+.project-info button[type="button"] {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  max-width: none !important;
+  animation: none !important;
+  overflow: visible !important;
+}
+
+/* Ensure bullets work properly on animated buttons */
+.content button[type="button"] .square,
+.content button[type="button"] .bullet-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix hover states for animated buttons */
+.content button[type="button"]:hover .square,
+.content button[type="button"]:focus .square {
+  background-color: #c8c2aa !important;
+}
+
+.content button[type="button"]:hover .bullet-container,
+.content button[type="button"]:focus .bullet-container {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+
+
+

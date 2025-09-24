@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+  
+  <!-- Boot Screen Overlay -->
+  <div id="boot-screen" class="boot-screen-overlay">
+    <div style="height: 6rem; margin-bottom: 4rem;"></div>
+    <div class="boot-screen-container">
+      <div style="height: 3rem;"></div>
+      <video id="boot-video" autoplay muted playsinline>
+        <source src="Boot-Screen.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <div class="boot-screen-loading">
+        <div class="loading-text">INITIALIZING SYSTEM...</div>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+    <header>
+      <meta charset="UTF-8" />
+      <title>PORTFOLIO</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link rel="stylesheet" type="text/css" href="skills.css" />
+      <link rel="stylesheet" type="text/css" href="projects.css" />
+      <link rel="stylesheet" type="text/css" href="contact.css" />
+      <link rel="stylesheet" type="text/css" href="button-animations.css" />
+      <link rel="stylesheet" type="text/css" href="self-destruct.css" />
+      
+      <script src="script_fixed.js"></script>
+
+      <nav class="menu-bar">
+        <button class="menu-button" data-url="index.html">
+          
+          <span class="menu-icon">⚙</span> ABOUT
+        </button>
+
+        <button class="menu-button" data-url="projects.html">
+          <span class="menu-icon">⚙</span> PROJECTS
+        </button>
+
+        <button class="menu-button" data-url="skills.html">
+          <span class="menu-icon">⚙</span> SKILLS
+        </button>
+
+        <button class="menu-button" data-url="contact.html">
+          <span class="menu-icon">⚙</span> CONTACT
+        </button>
+      </nav>
+
+      <div class="pattern">
+        <div class="container">
+          <div class="pattern-inner"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 id="page-title">
+          <span>Hi, I'm Nguyen Xuan Hai</span>
+          <small>Full SNack Developer</small>
+        </h1>
+      </div>
+    </header>
+
+    <body>
+      <main>
+        <div class="row-container">
+          <div class="container">
+            <div class="content">
+              <!-- <button type="button" data-url="index.html"> 
+                <span class="square"></span> About myself</button> -->
+
+              <button type="button" data-url="projects.html">
+                <span class="square"></span>Projects i done
+              </button>
+              <button type="button" data-url="skills.html">
+                <span class="square"></span>Skills i have
+              </button>
+              <button type="button" data-url="contact.html">
+                <span class="square"></span>Contact
+              </button>
+            </div>
+
+            <div class="description">
+              <h2>Welcome !</h2>
+              <p>
+                <span class="square2"></span>
+                Nguyen Xuan Hai
+              </p>
+              <h4>
+                A web developer with a passion for creating engaging user
+                interfaces and experiences.
+              </h4>
+            </div>
+          </div>
+
+          <div class="main-content">
+            <div class="head-bar">
+              <p style="margin: 10px">
+                <span class="square2"></span> Introduction
+              </p>
+            </div>
+
+            <div class="content-row">
+              <img src="cat-eating-snacks.gif" alt="2B Character" />
+              
+              <p>
+                Who the fuck am I, you ask ? <span style="font-size: 0.6rem">(I know you didn't ask just pretend someone ask me).</span>
+            
+                Well, I'm a web backend developer
+                who lives somewhere between clean architecture and messy
+                late-night debugging sessions. I craft APIs, design databases,
+                and build systems that (hopefully) don't break at 3 AM. My
+                weapon of choice? Java, C#, and a bit of JavaScript
+                sprinkled here and there. I've worked on projects ranging from
+                small hobby apps to full-stack platforms, and I'm always hungry
+                to learn, break things, and rebuild them better. If you're
+                looking for someone who mixes technical skills with a bit of
+                dark humor, you've found me. (chat gpt-5 generated . My name is Nguyen Xuan Hai , and i need a job, that all...)
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </body>
+
+    <footer>
+      <div class="sub-container">
+        <div class="sub-content">
+          <p>Menu Navigation</p>
+          <p><kbd>A</kbd>, <kbd>D</kbd> Select Menu <kbd>ENTER</kbd> Confirm</p>
+        </div>
+      </div>
+      <div class="pattern">
+        <div class="container">
+          <div class="pattern-inner"></div>
+        </div>
+      </div>
+      <div class="container">
+        <p style="margin: 0;">© 2025 Nguyen Xuan Hai. Base on Nier Automata UI.</p>
+      </div>
+    </footer>
+
+    <template id="bullet-template">
+      <div class="bullet-container">
+        <div class="bullet">
+          <span class="small-square"></span>
+          <span class="diamond"><span class="circle"></span></span>
+          <span class="small-square"></span>
+        </div>
+      </div>
+    </template>
+  </div>
+</html>

@@ -1,0 +1,258 @@
+.project-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  flex: 2; /* Takes up twice as much space as .container */
+  max-width: 2000px; /* Maximum width */
+  min-width: 500px; /* Minimum width */
+
+  height: 565px; /* Fixed height */
+  margin-right: 1rem;
+}
+
+
+/* Vertical Slider Container */
+.project-slider-container {
+  height: 610px; /* Height to show exactly 2 cards */
+  overflow: hidden; /* Hide cards outside the view */
+  position: relative;
+  width: 100%;
+  border: 2px solid rgba(181, 175, 144, 0.3);
+  border-radius: 5px;
+  padding-left: 3rem;
+  margin-left: -3rem;
+ 
+}
+
+/* Slider Track */
+.project-slider {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+  
+}
+
+/* Fade effect for edges */
+.project-slider-container::before,
+.project-slider-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.project-slider-container::before {
+  top: 0;
+  background: linear-gradient(to bottom,  rgba(181, 175, 144, 0.3), transparent);
+}
+
+.project-slider-container::after {
+  bottom: 0;
+  background: linear-gradient(to top,  rgba(181, 175, 144, 0.3), transparent);
+}
+
+
+/* Project Card */
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #b5af90;
+  padding: 1rem;
+  box-shadow: 2px 2px 4px rgba(50, 50, 50, 0.2);
+  height: 250px; /* Fixed height */
+  margin-bottom: 20px;
+  margin-left: 1rem;
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: calc(100% - 2rem); /* Consistent width */
+
+}
+
+/* Left Info */
+.project-info {
+  flex: 0 0 50%;
+
+}
+
+
+
+
+.project-info button{
+  margin-left: -16px;
+  margin-top: -16px;
+  width: 41rem;
+  height: 6rem;
+  font-size: 1.5rem;
+
+}
+.project-description {
+   background: rgba(220, 214, 180, 0.85);
+   margin-left: -16px;
+   margin-top: -16px;
+   height:60%;
+}
+.project-info p {
+  margin: 0.3rem 1rem;
+ 
+}
+
+.project-info ul {
+  margin-top: 0.3rem;
+  padding-left: 2rem;
+}
+
+/* Right Image */
+.project-image {
+  max-width: 570px;
+  max-height: 300px;
+  display: flex;
+  flex: 0 0 50%;
+  height: 280px;
+  /* background-color: rgba(220, 214, 180, 0.85); */
+  margin-top: -16px;
+  
+}
+
+.project-image img {
+  max-width: 500px;
+  max-height: 440px;
+  width: 500px;
+  height: 180px;
+  border: 20px solid rgba(220, 214, 180, 0.85);
+  margin-left: -42px;
+  background-color: transparent;
+  box-shadow: none;
+  
+  
+}
+
+
+
+/* Project Category Button Active State */
+.container button[data-project-url].active {
+  background-color: rgba(77, 73, 62, 0.35);
+  color: #c8c2aa;
+  border-color: #4d493e;
+  transform: translateX(5px);
+}
+
+.container button[data-project-url].active .square {
+  border-color: #c8c2aa;
+}
+
+/* Project Category Button Hover/Focus States */
+.container button[data-project-url]:hover,
+.container button[data-project-url]:focus {
+  background-color: rgba(77, 73, 62, 0.2);
+  color: #c8c2aa;
+  border-color: #4d493e;
+  transform: translateX(3px);
+  transition: all 0.25s ease;
+}
+
+
+.project-wrapper{
+    margin-right: 29px;
+}
+
+
+.project-wrapper button{
+font-size: 1.8rem;
+}
+
+
+
+.project-detail-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #b5af90;
+  background-color: rgba(220, 214, 180, 0.85);
+  padding: 1rem;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+  color: #3a362f;
+  height: 35rem;
+}
+.project-detail-container h2 {
+  background-color: #4d493e;
+  color: #e0dbc2;
+  padding: 0.5rem;
+  margin: -1rem -1rem 1rem -1rem; /* full chiều ngang container */
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+/* Content chia 2 cột */
+.project-detail-content {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Bên trái */
+.project-detail-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+/* Hình preview */
+.project-detail-image img {
+  width: 85%;
+  border: 4px solid #6d695e;
+  margin-bottom: 0.8rem;
+  height: 50rem;
+}
+
+/* Thông tin ngắn */
+.project-detail-info {
+  background-color: rgba(220, 214, 180, 0.7);
+  padding: 0.8rem;
+  border: 2px solid #b5af90;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* Bên phải */
+.project-detail-right {
+  flex: 1;
+
+  padding: 1rem;
+  overflow-y: auto; /* nếu text dài thì có scroll */
+  font-size: 0.95rem;
+}
+
+.project-detail-right h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #6d695e;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+.project-detail-right a {
+  text-decoration: none;
+  color: #4d493e;
+  border-bottom: 1px dashed #4d493e;
+}
+
+.project-detail-right a:hover {
+  color: #c8c2aa;
+  border-bottom-color: #c8c2aa;
+}
+
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 1.6rem;
+}
