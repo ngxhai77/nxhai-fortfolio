@@ -1083,8 +1083,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Scale page functionality
   function scalePage() {
-    const baseWidth = 2370;  // Chiều rộng gốc
-    const baseHeight = 1100; // Chiều cao gốc
+    const baseWidth = 2222;  // Chiều rộng gốc
+    const baseHeight = 1080; // Chiều cao gốc
     const scaleX = window.innerWidth / baseWidth;
     const scaleY = window.innerHeight / baseHeight;
     const scale = Math.min(scaleX, scaleY); // Giữ tỉ lệ chuẩn

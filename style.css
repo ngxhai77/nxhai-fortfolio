@@ -128,12 +128,12 @@ body {
   letter-spacing: 0.1rem;
   overflow: hidden;
   height: 100%;
-  
+      width: 1670px;
 }
 
 .page-wrapper {
-  width: 2370px;   /* Kích thước gốc của web (design base) */
-  height: 1180px;  /* Kích thước gốc */
+  width: 2222px;   /* Kích thước gốc của web (design base) */
+  height: 1080px;  /* Kích thước gốc */
   transform-origin: top left; /* Điểm scale bắt đầu */
 
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
