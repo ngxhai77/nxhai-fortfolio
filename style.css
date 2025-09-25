@@ -128,7 +128,9 @@ body {
   letter-spacing: 0.1rem;
   overflow: hidden;
   height: 100%;
-      width: 1670px;
+    width: 165%;        /* body full chiều ngang màn hình nhỏ */
+  max-width: 1670px;  /* nhưng không vượt quá 1670px */
+  margin: 0 auto;     /* căn giữa khi màn hình rộng hơn */
 }
 
 .page-wrapper {
